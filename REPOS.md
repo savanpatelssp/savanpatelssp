@@ -1,0 +1,257 @@
+# SP NET — Repository & Visibility Strategy
+
+This document defines the complete GitHub repository plan for `savanpatelssp`.
+It records every project identified on the local machine, whether it should be public or
+private, the rationale, and the recommended name / description / topics.
+
+> **Usernames note:** existing remotes use `SavanPatelSP` / `savanpatelsp` (GitHub treats
+> these case-insensitively and they resolve to the same account). The account is managed
+> as `savanpatelssp`.
+
+> **Branding (distinct entities):**
+> - **SP NET** ([sp-net.in](https://sp-net.in)) — the **parent organization**.
+> - **SP NET INC** ([spnetinc.com](https://spnetinc.com)) — a **child company operating
+>   within / under the broader SP NET organization**. Not independent of SP NET.
+> - The GitHub identity is **"Founder & Engineer · SP NET INC"**, but the profile materials
+>   must keep SP NET as the parent and never describe sp-net.in as the "SP NET INC website"
+>   or SP NET INC as an independent company.
+
+---
+
+## Positioning
+
+The GitHub presence is anchored on **three pillars** consistent with the company:
+
+| Pillar | Product | Public anchor |
+|---|---|---|
+| Communication | SP NET GRAM | `spnetgram-website` |
+| Ownership | SP NET ADMIN OS / Platform | `spnet-admin`, `SPNET-API` (private) |
+| Community | Community infrastructure | future |
+
+The **flagship technical project** is **SavaroX** — a Layer-1 blockchain built from first
+principles. It is the deepest signal of engineering capability on the profile.
+
+---
+
+## Public repositories
+
+Public repos are the professional face of the account. Each must have a **real, maintained
+README**; a default `create-next-app` README is not acceptable for a public repo.
+
+| # | Repo | Description (recommended) | Topics | Purpose | README status |
+|---|---|---|---|---|---|
+| 1 | `savarox` | Layer-1 blockchain built from first principles — consensus, nodes, wallets, SDK, and block explorer. Native currency SRX. | `blockchain`, `layer1`, `consensus`, `typescript`, `cryptocurrency`, `distributed-systems` | Flagship technical showcase | Maintain existing |
+| 2 | `savan-portfolio` | Personal portfolio & product hub — engineering, design, and founder story. | `portfolio`, `nextjs`, `typescript`, `tailwindcss`, `react` | Design + craft showcase | Already polished |
+| 3 | `spnet-website` | Website for the SP NET parent organization (sp-net.in). | `nextjs`, `react`, `typescript`, `tailwindcss`, `company-site` | Brand face | **Rewrite needed** |
+| 4 | `spnet-admin` | SP NET ADMIN OS — enterprise administration platform with RBAC, audit logs, analytics, moderation. | `admin`, `dashboard`, `rbac`, `nextjs`, `enterprise` | Engineering depth | **Rewrite needed** |
+| 5 | `spnetgram-website` | Official website for SP NET GRAM — messaging platform. | `messaging`, `nextjs`, `typescript`, `product-site` | Communication pillar | Maintain existing |
+| 6 | `spng-helpdesk` | Enterprise helpdesk — multi-channel (email, WhatsApp, chat) business communication. | `helpdesk`, `support`, `nextjs`, `multichannel` | Breadth signal | **Rewrite needed** |
+
+### Recommended final 6 pinned repositories
+
+Excluding the profile repo (auto-displayed), the strongest final six, evaluated against
+actual repo state (value, credibility, uniqueness, readiness):
+
+1. `savarox` — flagship, uniquely technical, ready
+2. `savan-portfolio` — premium craft, ready
+3. `spnet-website` — brand anchor for the SP NET parent organization
+4. `spnet-admin` — enterprise engineering depth
+5. `spnetgram-website` — communication pillar product site
+6. `spng-helpdesk` — breadth across business communication
+
+Rationale: this set shows **blockchain depth** (SavaroX), **design craft** (portfolio),
+**brand** (spnet-website), **enterprise rigor** (admin), **a flagship product** (GRAM site),
+and **platform breadth** (helpdesk) — a balanced representation of who you are and what
+you build, without exposing the private backend.
+
+---
+
+## Private repositories
+
+Private repos are kept off the public profile. They are internal, commercially sensitive,
+or not representative of the current stack.
+
+| Repo | Why private |
+|---|---|
+| `SPNET-API` | Private backend powering the whole ecosystem (24 modules, 57 controllers, internal architecture). Commercially sensitive. **Reference publicly, do not expose source.** |
+| `SPNETGRAM-ADMINBOT` | Internal ops tool (Telegraf admin bot). Operational, not showcase. |
+| `SP-NET-GRAMS` | Fork of Telegram Android source. Licensing concerns with upstream. |
+| `SPNETTOOLS` | PHP Telegram bot — legacy stack, not representative of current TypeScript engineering. |
+| `spnet-submit` | Internal workspace/content submission tool. |
+| `spnet-submit-studio` | Internal studio platform (SQLite, in-progress). |
+| `spnet-diagnostics-service` | Internal monitoring/diagnostics. |
+| `spnet-community` | No commits yet; infrastructure not released. Keep local until it matures. |
+| `SPNET-CC` (Control Center) | No git repo; unified internal admin. |
+| `sp-net-in` | Superseded by `spnet-website`. Do not publish. |
+| `spnetgram` assets, `spnet-icons` | Brand assets, not code repos. |
+| `savarox_wallet` | Flutter wallet, not yet git-initialized/ready. |
+| `Documents/spnet-backend` | Python game backend (stdlib/SQLite), research-stage. |
+| `stable-diffusion-webui-forge` | Third-party tool, not your code. |
+| `Documents/GitHub/test sp`, `desktop-tutorial` | Scaffolding, not representative. |
+| `StudioProjects/*` | Android Studio test projects, not representative. |
+
+---
+
+## Organization structure
+
+**Recommendation: keep the personal `savanpatelssp` account as the primary namespace for now.**
+You have no collaborators requiring org-level teams or billing. A GitHub **organization**
+(`github.com/sp-net`) becomes valuable once there is a second contributor, a need for
+team/role management, or when migrating repos as a formal company account.
+
+**When to create the org:** when SP NET has ≥1 additional collaborator or your first
+team-level repo. At that point, transfer the flagship public repos into it and keep the
+profile repo + `savan-portfolio` on the personal account.
+
+---
+
+## Suggested repository creation order
+
+1. Push public repos that already exist and have real content (`savarox`, `savan-portfolio`,
+   `spnetgram-website`).
+2. Rewrite and push the brand/engineering repos (`spnet-website`, `spnet-admin`,
+   `spng-helpdesk`).
+3. Pin the final six.
+4. Keep `SPNET-API` private and link it from the profile text as the platform foundation.
+
+---
+
+## README templates & verboten list
+
+For every public repo, follow the consistent structure (see per-repo drafts):
+
+1. One-line description
+2. What it does (2–3 sentences)
+3. Architecture / how it works (if complex)
+4. Tech stack (inline, no badge images)
+5. Getting started
+6. Status
+7. License
+
+**Verboten for this profile (all repos + profile):**
+- No badge-image spam (shields.io walls)
+- No fake/meaningless GitHub statistics cards
+- No rainbow emoji filler
+- No flashy animations
+- No generic "portfolio template" copy
+
+---
+
+## Icon system & assets
+
+### Approach
+
+The profile README uses a **coherent, monochrome SVG icon system** — no emoji, no inline
+`<svg>`, no JavaScript, no runtime dependencies. Icons are stored **locally** in the
+profile repo and referenced by **relative path** through `<img>` tags. This is the reliable
+pattern for GitHub's README renderer:
+
+- GitHub **sanitizes Markdown READMEs and blocks raw inline `<svg>`**, but it renders
+  `<img src="relative/path.svg">` via its camo image proxy. Keep every icon as a file, not
+  inline markup.
+- Result: fast, self-contained (no external CDN at render time), degrades to alt text if
+  an asset is ever missing, and does not break when third-party services go down.
+
+### Directory layout
+
+```
+assets/
+  icons/
+    brands/   — Simple Icons (recognized tech/brand logos), monochrome
+    ui/       — Lucide-style stroke icons (concepts & navigation), monochrome
+  marks/      — custom brand-derived marks (SP NET family)
+```
+
+### Sources & licensing
+
+- **Brand logos** (`assets/icons/brands/`) — sourced from
+  [Simple Icons](https://simpleicons.org) (CC0). Fetched via `cdn.simpleicons.org` and
+  set to `fill="#000000"` for a consistent monochrome look.
+- **Concept/navigation icons** (`assets/icons/ui/`) — sourced from
+  [Lucide](https://lucide.dev) (ISC/MIT). Fetched from `lucide-static` and normalized to
+  `stroke="#24292f"` (GitHub's default text colour), 2px stroke, `viewBox 0 0 24 24`.
+- **Family marks** (`assets/marks/`) — derived from **existing real assets** in the
+  workspace (not invented logos):
+  - `spnet-ring.svg` — from `~/Desktop/outer_ring.svg` (SP NET hexagonal ring).
+  - `spnet-gram.svg` — from `~/Desktop/spnetgram_ring.svg` (ring + paper-plane mark).
+
+> Rule: do **not** invent official logos that don't exist. Where a brand has no real mark
+> in the workspace (e.g. SavaroX, SP NET ADMIN OS), use a neutral Lucide concept icon
+> instead of fabricating one.
+
+### Conventions
+
+- **Colour:** single restrained monochrome (`#24292f`, GitHub text). No brand colours, no
+  rainbow. Keeps the page cohesive and premium.
+- **Sizes:** 14px inline/nav · 16px inline emphasis · 20px technology grid · 22px pillar
+  cards · 26px product marks.
+- **Never** use `<svg>` inline in the README; always `<img src="assets/...">`.
+- Keep icons minimal — one per concept, no duplicate/competing marks for the same thing.
+
+### How to add an icon
+
+1. Download the SVG to the right folder (brand/`brands/`, concept/`ui/`, family mark/`marks/`).
+2. Normalize colour to `#24292f` (stroke for Lucide, fill for Simple Icons).
+3. Reference via `<img src="assets/...svg" width="N" height="N" alt="...">`.
+4. Confirm the path resolves (see the verify step in the build notes).
+
+---
+
+## GitHub profile cards / widgets — strategy
+
+### Verified account state (checked live)
+
+`public_repos: 0` · `public_gists: 0` · `followers: 1` · created 2026-07-04.
+
+Every live/dynamic stats widget reads this public data, so on a brand-new account **all of
+them render zero/empty**. The profile favours clean, honest, always-visible content, so
+**no dynamic stats cards are included in the profile README right now** — this is the
+selective, evidence-based call, consistent with the project guidance (cards only help when
+they tell a true, current story; empty cards actively hurt a first impression).
+
+### Evaluated options
+
+| Card / service | Verdict for now | Why |
+|---|---|---|
+| GitHub stats card (`github-readme-stats` / `github-stats-extended`) | **Defer** | Would render 0 stars/0 repos. Add once there's real activity. |
+| Top-languages card | **Defer** | 0 public repos → empty. Needs real repos; then `hide=HTML,CSS` + compact layout so it shows the true stack (TypeScript, Dart, Java). |
+| Streak card (`DenverCoder1/github-readme-streak-stats`) | **Defer** | Current streak reads 0 days on a new account. |
+| Trophy card (`github-profile-trophy`) | **Reject** | Rank B/C/UNKNOWN on a new account reads as gamified/junior; explicitly discouraged by hiring-focused guidance. |
+| Activity graph (`github-readme-activity-graph`) | **Defer** | Empty on a new account; duplicates the native contribution squares. |
+| Visitor / hit counter | **Reject** | Low number looks sad; no hiring signal. |
+| SVG snake / typing animation / quote cards | **Reject** | Novelty embeds, load slow, push content down. |
+| Static showcase (HTML table in README) | **Selected now** | Always renders, never empty, no third-party service, no load-time/rate-limit risk. Present in the current README. |
+
+### When ready (activation plan)
+
+Once the account has honest activity (recommended: after pushing the public repos and
+~2–4+ weeks of commits), flip on exactly **two** cards, matching the README's clean style:
+
+1. **Stats card** — count the current year, include private contributions (requires a
+   fine-grained token via a self-hosted/`github-readme-stats-action` instance), keep a
+   minimal theme, `hide_border=true`, no rank icon.
+2. **Top-languages card** — `layout=compact`, `hide=HTML,CSS,Jupyter`, limited language
+   count, so it reads "TypeScript, Dart, Java / …" rather than "HTML 78%".
+
+Keep: no trophies, no streak pressure, no counters. Prefer a **self-hosted** instance
+(Vercel + token) over the shared public endpoint, which is prone to rate-limit outages.
+
+---
+
+## Manual GitHub setup needed (not code)
+
+Do these on github.com, not via commits:
+
+1. **Profile README repo** — create `savanpatelssp/savanpatelssp` (exact account name) and
+   push the profile `README.md`. GitHub requires the repo name to exactly match the
+   username for it to display on the profile.
+2. **Profile settings**
+   - **Bio:** `Founder & Engineer · SP NET INC`
+   - **Website:** `https://sp-net.in`
+   - **Location:** optional city/country
+   - Clear the current generic/coded bio and blog fields (they are placeholders today).
+3. **Avatar & name** — set a professional avatar; confirm display name **"Savan Patel"**.
+4. **Pin the six repos** after pushing them (see pin list above).
+5. **Pinned-repo settings** — ensure descriptions + topics are set so pins look intentional.
+6. (Optional, later) **Private contribution setting** — enable "Include private contributions
+   on my profile" only once it is true and you want it reflected in the native graph.
