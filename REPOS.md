@@ -141,10 +141,11 @@ For every public repo, follow the consistent structure (see per-repo drafts):
 
 ### Approach
 
-The profile README uses a **coherent, monochrome SVG icon system** — no emoji, no inline
-`<svg>`, no JavaScript, no runtime dependencies. Icons are stored **locally** in the
-profile repo and referenced by **relative path** through `<img>` tags. This is the reliable
-pattern for GitHub's README renderer:
+The profile README uses a **premium SVG asset system in the SP NET brand palette** — real
+brand-colour logos, brand-navy Lucide concept icons, and a self-contained navy hero banner.
+No emoji, no inline `<svg>`, no JavaScript, no runtime dependencies. Everything is stored
+**locally** in the profile repo and referenced by **relative path** through `<img>` tags.
+This is the reliable pattern for GitHub's README renderer:
 
 - GitHub **sanitizes Markdown READMEs and blocks raw inline `<svg>`**, but it renders
   `<img src="relative/path.svg">` via its camo image proxy. Keep every icon as a file, not
@@ -156,42 +157,58 @@ pattern for GitHub's README renderer:
 
 ```
 assets/
-  icons/
-    brands/   — Simple Icons (recognized tech/brand logos), monochrome
-    ui/       — Lucide-style stroke icons (concepts & navigation), monochrome
-  marks/      — custom brand-derived marks (SP NET family)
+  hero/       — full-width navy banner (genuine ring + plane mark, brand navy #1E3D4D)
+  brands/     — Simple Icons (recognized tech/brand logos), native brand colours
+  icons/ui/   — Lucide-style stroke icons (concepts & navigation), navy stroke #1E3D4D
+  marks/      — SP NET family marks (ring + paper-plane), navy/blue derivations
+  motion/     — subtle SMIL breathing-glow mark (see animation note below)
+  dividers/   — hairline vs. lead gradient separators + ecosystem-flow brand diagram
 ```
 
 ### Sources & licensing
 
-- **Brand logos** (`assets/icons/brands/`) — sourced from
-  [Simple Icons](https://simpleicons.org) (CC0). Fetched via `cdn.simpleicons.org` and
-  set to `fill="#000000"` for a consistent monochrome look.
+- **Brand logos** (`assets/brands/`) — sourced from [Simple Icons](https://simpleicons.org)
+  (CC0), fetched via `cdn.simpleicons.org/<slug>` and **kept at their native brand colour**
+  for recognisability on the white README background.
 - **Concept/navigation icons** (`assets/icons/ui/`) — sourced from
-  [Lucide](https://lucide.dev) (ISC/MIT). Fetched from `lucide-static` and normalized to
-  `stroke="#24292f"` (GitHub's default text colour), 2px stroke, `viewBox 0 0 24 24`.
+  [Lucide](https://lucide.dev) (ISC/MIT), fetched from `lucide-static` and normalized to
+  `stroke="#1E3D4D"` (brand navy), 2px stroke, `viewBox 0 0 24 24`.
 - **Family marks** (`assets/marks/`) — derived from **existing real assets** in the
   workspace (not invented logos):
-  - `spnet-ring.svg` — from `~/Desktop/outer_ring.svg` (SP NET hexagonal ring).
-  - `spnet-gram.svg` — from `~/Desktop/spnetgram_ring.svg` (ring + paper-plane mark).
+  - `spnet-ring.svg` / `spnet-ring-navy.svg` — SP NET hexagonal ring (navy stroke).
+  - `spnet-gram.svg` / `spnet-gram-navy.svg` — ring + paper-plane mark (blue accent plane).
+  - `spnet-badge.svg` — the complete ring + inner blue badge + white plane mark (the full
+    genuine SPGRAM treatment). Used for GRAM and the hero/motion/ecosystem visuals.
+- **Hero** (`assets/hero/spnet-hero.svg`) — self-contained banner composing the genuine
+  ring + plane geometry on navy `#1E3D4D` with `#35A9E6` accent and `<text>` (valid because
+  it lives inside an SVG *file*, not inline in the README).
 
 > Rule: do **not** invent official logos that don't exist. Where a brand has no real mark
 > in the workspace (e.g. SavaroX, SP NET ADMIN OS), use a neutral Lucide concept icon
 > instead of fabricating one.
 
+### Animation note
+
+CSS `@keyframes` and JavaScript are stripped by GitHub, but **SMIL** (`<animate>`,
+`<animateTransform>`) survives GitHub's sanitizer and animates in modern browsers.
+`assets/motion/spnet-motion.svg` uses a slow (7s) breathing opacity/radius pulse on a
+halo behind the ring mark — subtle, not flashing or spinning. **Honest caveat:** some
+GitHub renderers and the camo image proxy flatten SMIL to the static first frame (a fully
+drawn mark), so the motion is progressive enhancement over an always-visible static mark.
+
 ### Conventions
 
-- **Colour:** single restrained monochrome (`#24292f`, GitHub text). No brand colours, no
-  rainbow. Keeps the page cohesive and premium.
-- **Sizes:** 14px inline/nav · 16px inline emphasis · 20px technology grid · 22px pillar
-  cards · 26px product marks.
+- **Colour:** brand navy `#1E3D4D` + electric blue `#35A9E6` + white/off-white. Real brand
+  colours only for logos; concept icons use navy stroke. No rainbow, no badge walls.
+- **Sizes:** 14px inline/nav · 16px inline emphasis · 16px technology grid · 22px selected-work
+  cards · 26px building cards · hero is full-width.
 - **Never** use `<svg>` inline in the README; always `<img src="assets/...">`.
 - Keep icons minimal — one per concept, no duplicate/competing marks for the same thing.
 
 ### How to add an icon
 
-1. Download the SVG to the right folder (brand/`brands/`, concept/`ui/`, family mark/`marks/`).
-2. Normalize colour to `#24292f` (stroke for Lucide, fill for Simple Icons).
+1. Download the SVG to the right folder (brand/`brands/`, concept/`icons/ui/`, family mark/`marks/`).
+2. Brands: keep native Simple Icons colour. Concepts/Lucide: normalize `stroke` to `#1E3D4D`.
 3. Reference via `<img src="assets/...svg" width="N" height="N" alt="...">`.
 4. Confirm the path resolves (see the verify step in the build notes).
 
