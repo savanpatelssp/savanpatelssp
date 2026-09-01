@@ -179,22 +179,39 @@ assets/
   - `spnet-gram.svg` / `spnet-gram-navy.svg` — ring + paper-plane mark (blue accent plane).
   - `spnet-badge.svg` — the complete ring + inner blue badge + white plane mark (the full
     genuine SPGRAM treatment). Used for GRAM and the hero/motion/ecosystem visuals.
+
+### Owned product marks (`assets/projects/`)
+
+Custom profile marks for **owned brands** (not official logos, but consistent ring+core
+family marks): `savarox.svg`, `gram.svg` (genuine SPGRAM badge), `admin-os.svg`,
+`platform.svg`. Rule: an owned brand uses its owned mark; only genuinely generic UI
+concepts (e.g. Portfolio, Helpdesk) fall back to a Lucide `icons/ui/` icon.
 - **Hero** (`assets/hero/spnet-hero.svg`) — self-contained banner composing the genuine
   ring + plane geometry on navy `#1E3D4D` with `#35A9E6` accent and `<text>` (valid because
   it lives inside an SVG *file*, not inline in the README).
 
-> Rule: do **not** invent official logos that don't exist. Where a brand has no real mark
-> in the workspace (e.g. SavaroX, SP NET ADMIN OS), use a neutral Lucide concept icon
-> instead of fabricating one.
+> Rule: do **not** invent official logos that don't exist. Owned brands use their owned
+> `assets/projects/` mark; only genuinely generic UI concepts (e.g. a personal portfolio)
+> use a neutral Lucide icon instead of fabricating one.
 
 ### Animation note
 
 CSS `@keyframes` and JavaScript are stripped by GitHub, but **SMIL** (`<animate>`,
 `<animateTransform>`) survives GitHub's sanitizer and animates in modern browsers.
-`assets/motion/spnet-motion.svg` uses a slow (7s) breathing opacity/radius pulse on a
-halo behind the ring mark — subtle, not flashing or spinning. **Honest caveat:** some
-GitHub renderers and the camo image proxy flatten SMIL to the static first frame (a fully
-drawn mark), so the motion is progressive enhancement over an always-visible static mark.
+`assets/motion/spnet-footer.svg` (footer) and `assets/hero/spnet-hero-v4.svg` use a slow
+(7–8s) breathing opacity/radius pulse on a halo behind the mark — subtle, not flashing
+or spinning. **Honest caveat:** some GitHub renderers and the camo image proxy flatten
+SMIL to the static first frame (a fully drawn mark), so the motion is progressive
+enhancement over an always-visible static mark.
+
+### Motion hierarchy
+
+- **Hero** → ambient halo (SMIL in `spnet-hero-v4.svg`)
+- **Ecosystem** → signal/pulse (`ecosystem-flow.gif`, 60f 700×400)
+- **Currently Building** → breathing signal (`signal-glow.gif`, 36f 240×240)
+- **Footer** → subtle ambient halo (SMIL in `spnet-footer.svg`)
+
+Combined animated GIF payload is well under 500 KB.
 
 ### Conventions
 
@@ -202,8 +219,18 @@ drawn mark), so the motion is progressive enhancement over an always-visible sta
   colours only for logos; concept icons use navy stroke. No rainbow, no badge walls.
 - **Sizes:** 14px inline/nav · 16px inline emphasis · 16px technology grid · 22px selected-work
   cards · 26px building cards · hero is full-width.
+- **Mark ownership:** an owned brand uses its owned mark (`assets/projects/` or
+  `assets/marks/`); a technology uses a real brand logo (`assets/brands/`); only genuinely
+  generic UI concepts use a Lucide `icons/ui/` icon. Never a generic icon as a product identity.
 - **Never** use `<svg>` inline in the README; always `<img src="assets/...">`.
 - Keep icons minimal — one per concept, no duplicate/competing marks for the same thing.
+
+### Ecosystem diagram
+
+`assets/dividers/ecosystem-flow-v5.svg` is **700×400** (1.75:1). The earlier `-v4` asset used
+a 3.57:1 canvas whose product labels fell outside the `viewBox` bottom edge, so GitHub clipped
+them. Rule for diagrams: the `viewBox` must contain 100% of content (labels included) with
+matched `width`/`height`; verify with rasterization at both desktop and 360px width before use.
 
 ### How to add an icon
 

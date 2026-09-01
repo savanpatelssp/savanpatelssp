@@ -53,11 +53,11 @@ Three pillars shape everything I ship:
 owning and engineering the products and platforms of the ecosystem.
 
 <p align="center">
-  <img src="assets/dividers/ecosystem-flow-v4.svg" width="92%" alt="SP NET → SP NET INC → SavaroX, GRAM, ADMIN OS, Platform">
+  <img src="assets/dividers/ecosystem-flow-v5.svg" width="80%" alt="SP NET → SP NET INC → SavaroX, GRAM, ADMIN OS, Platform">
 </p>
 
 <p align="center">
-  <img src="assets/motion/ecosystem-flow.gif" width="58%" alt="SP NET → SP NET INC signal">
+  <img src="assets/motion/ecosystem-flow.gif" width="70%" alt="SP NET → SP NET INC signal along the ecosystem flow">
 </p>
 
 ---
@@ -188,31 +188,31 @@ this profile.
 <table align="center">
   <tr>
     <td align="center" width="33%" valign="top">
-      <img src="assets/icons/ui/code.svg" width="22" height="22" alt=""><br>
+      <img src="assets/projects/savarox.svg" width="22" height="22" alt=""><br>
       <strong>SavaroX</strong><br>
       <sub>Layer-1 blockchain — consensus, nodes, wallets, SDK, explorer.</sub>
+    </td>
+    <td align="center" width="33%" valign="top">
+      <img src="assets/marks/spnet-badge.svg" width="22" height="22" alt=""><br>
+      <strong>SP NET Website</strong><br>
+      <sub>Brand anchor for the parent SP NET organization.</sub>
+    </td>
+    <td align="center" width="33%" valign="top">
+      <img src="assets/projects/admin-os.svg" width="22" height="22" alt=""><br>
+      <strong>SP NET Admin</strong><br>
+      <sub>Enterprise administration — RBAC, audit, analytics, moderation.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="33%" valign="top">
+      <img src="assets/projects/gram.svg" width="22" height="22" alt=""><br>
+      <strong>SP NET GRAM</strong><br>
+      <sub>Product site for the messaging platform.</sub>
     </td>
     <td align="center" width="33%" valign="top">
       <img src="assets/icons/ui/folder-code.svg" width="22" height="22" alt=""><br>
       <strong>Portfolio</strong><br>
       <sub>Personal product hub — engineering, design, and founder story.</sub>
-    </td>
-    <td align="center" width="33%" valign="top">
-      <img src="assets/icons/ui/layers.svg" width="22" height="22" alt=""><br>
-      <strong>SP NET Website</strong><br>
-      <sub>Brand anchor for the parent SP NET organization.</sub>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="33%" valign="top">
-      <img src="assets/icons/ui/shield.svg" width="22" height="22" alt=""><br>
-      <strong>SP NET Admin</strong><br>
-      <sub>Enterprise administration — RBAC, audit, analytics, moderation.</sub>
-    </td>
-    <td align="center" width="33%" valign="top">
-      <img src="assets/icons/ui/message-circle.svg" width="22" height="22" alt=""><br>
-      <strong>SP NET GRAM</strong><br>
-      <sub>Product site for the messaging platform.</sub>
     </td>
     <td align="center" width="33%" valign="top">
       <img src="assets/icons/ui/users.svg" width="22" height="22" alt=""><br>
@@ -226,14 +226,19 @@ this profile.
 
 <h2 id="contact">Contact</h2>
 
-- <img src="assets/icons/ui/globe.svg" width="14" height="14" alt="" align="top"> **SP NET** (parent organization) — <a href="https://sp-net.in">sp-net.in</a>
-- <img src="assets/icons/ui/building-2.svg" width="14" height="14" alt="" align="top"> **SP NET INC** (company) — <a href="https://spnetinc.com">spnetinc.com</a>
-- <img src="assets/icons/ui/mail.svg" width="14" height="14" alt="" align="top"> **Email** — <a href="mailto:savan@sp-net.in">savan@sp-net.in</a>
+- <img src="assets/marks/spnet-ring.svg" width="16" height="16" alt="SP NET mark" align="top"> **SP NET** (parent organization) — <a href="https://sp-net.in">sp-net.in</a>
+- <img src="assets/marks/spnet-badge.svg" width="16" height="16" alt="SP NET INC mark" align="top"> **SP NET INC** (company) — <a href="https://spnetinc.com">spnetinc.com</a>
+- <img src="assets/icons/ui/mail.svg" width="16" height="16" alt="" align="top"> **Email** — <a href="mailto:savan@sp-net.in">savan@sp-net.in</a>
+- <img src="assets/brands/telegram.svg" width="16" height="16" alt="Telegram" align="top"> **PCA on Telegram** — Chat with my personal assistant bot <!-- PLACEHOLDER: link omitted because the genuine public PCA bot `t.me/...` could not be verified in local project docs. Replace the text above with `— <a href="https://t.me/PCA_BOT_USERNAME">@PCA_BOT_USERNAME</a>` once you provide the real username. -->
 
 ---
 
 <p align="center">
-  <img src="assets/motion/spnet-motion.svg" width="64" height="64" alt="SP NET mark">
+  <img src="assets/motion/spnet-footer.svg" width="320" alt="Savan Patel — Founder & Engineer · SP NET INC. SP NET · SP NET INC · sp-net.in · spnetinc.com · GitHub · Telegram">
 </p>
 
-<sub align="center">© 2026 Savan Patel · Founder &amp; Engineer, SP NET INC</sub>
+<p align="center">
+  <img src="assets/dividers/divider-lead.svg" width="30%" alt="">
+</p>
+
+<sub align="center">© 2026 Savan Patel</sub>
