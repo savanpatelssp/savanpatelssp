@@ -282,6 +282,28 @@ Keep: no trophies, no streak pressure, no counters. Prefer a **self-hosted** ins
 
 ---
 
+## Licensing & provenance
+
+The profile repository is **proprietary** ("All Rights Reserved") — not MIT/Apache/GPL/BSD.
+This is intentional: original profile design, artwork, animations, and custom marks are
+protected, while third-party assets stay under their own licenses.
+
+- `LICENSE` — proprietary all-rights-reserved terms (allow view/inspect, deny reuse).
+- `PROVENANCE.md` — who owns what, what is original vs. derived vs. third-party.
+- `assets/ATTRIBUTIONS.md` — per-file asset origins and third-party licenses
+  (Simple Icons = CC0, Lucide = ISC, brand marks © their owners).
+
+Rules that must hold for any future asset added to this repo:
+- Original profile artwork (SVGs, diagrams, animations) → asset in `assets/` **plus**
+  a provenance comment at the top of the SVG.
+- Third-party logos/icons → keep the source's license/attribution; **never** stamp Savan
+  Patel's copyright onto them.
+- Derived marks (rework of genuine SP NET / SPGRAM artwork) → note "derived from genuine
+  SP NET brand artwork" in the provenance comment.
+- Update `assets/ATTRIBUTIONS.md` whenever a new third-party asset is introduced.
+
+---
+
 ## Manual GitHub setup needed (not code)
 
 Do these on github.com, not via commits:

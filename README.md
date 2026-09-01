@@ -229,7 +229,7 @@ this profile.
 - <img src="assets/marks/spnet-ring.svg" width="16" height="16" alt="SP NET mark" align="top"> **SP NET** (parent organization) — <a href="https://sp-net.in">sp-net.in</a>
 - <img src="assets/marks/spnet-badge.svg" width="16" height="16" alt="SP NET INC mark" align="top"> **SP NET INC** (company) — <a href="https://spnetinc.com">spnetinc.com</a>
 - <img src="assets/icons/ui/mail.svg" width="16" height="16" alt="" align="top"> **Email** — <a href="mailto:savan@sp-net.in">savan@sp-net.in</a>
-- <img src="assets/brands/telegram.svg" width="16" height="16" alt="Telegram" align="top"> **PCA on Telegram** — Chat with my personal assistant bot <!-- PLACEHOLDER: link omitted because the genuine public PCA bot `t.me/...` could not be verified in local project docs. Replace the text above with `— <a href="https://t.me/PCA_BOT_USERNAME">@PCA_BOT_USERNAME</a>` once you provide the real username. -->
+- <img src="assets/brands/telegram.svg" width="16" height="16" alt="Telegram" align="top"> **PCA on Telegram** — Chat with my personal assistant — <a href="https://t.me/SAVANPATELSP_BOT">@SAVANPATELSP_BOT</a>
 
 ---
 
@@ -241,4 +241,26 @@ this profile.
   <img src="assets/dividers/divider-lead.svg" width="30%" alt="">
 </p>
 
-<sub align="center">© 2026 Savan Patel</sub>
+<sub align="center">
+PCA assistant on Telegram · <a href="https://t.me/SAVANPATELSP_BOT">@SAVANPATELSP_BOT</a><br>
+© 2026 Savan Patel · Founder &amp; Engineer, SP NET INC · All rights reserved<br>
+Original profile design, artwork, and authored content by Savan Patel.
+</sub>
+
+---
+
+<h2 id="ownership">Ownership &amp; License</h2>
+
+This repository and its original content are authored and owned by **Savan Patel**
+(© 2026).
+
+Unless otherwise noted, the original README content, layout, artwork, animations, and
+profile-specific assets are protected by copyright and are **not** released under an
+open-source license. No license is granted to reproduce, redistribute, modify, or reuse
+original copyrighted material except where separately permitted by an applicable
+third-party license.
+
+Third-party assets remain subject to their respective licenses and trademark rights.
+
+See <a href="LICENSE">LICENSE</a> and <a href="PROVENANCE.md">PROVENANCE.md</a> for
+details.
